@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 def print_fraud(row):
-    st.write(f"Amount : {row['Amount']}")
+    st.write(f"Amount : {row[['Amount']]}")
 
 @st.cache_resource
 def load_model():
@@ -16,7 +16,7 @@ X = pd.read_csv('data/realtime_split.csv')
 
 st.title("Real-Time Fraud Detection Simulator")
 
-st.caption("The simulation will only log the fraudulent transactions on the screen. Since there are huge no. of transactions.")
+st.caption("The simulation will only log the fraudulent transactions on the screen. Since there are huge no. of transactions.(approx: 60000)")
 
 fraud, legit = 0,0
 
