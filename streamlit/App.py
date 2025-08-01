@@ -14,11 +14,11 @@ model = load_model()
 
 X = pd.read_csv('data/realtime_split.csv')
 
-X = X.iloc[:1000]
+X = X.iloc[:2000]
 
 st.title("Real-Time Fraud Detection Simulator")
 
-st.caption("The simulation will only log the fraudulent transactions on the screen. Since there are huge no. of transactions.(approx: 60000)")
+st.caption("The simulation will only log the fraudulent transactions on the screen. Since there are huge no. of transactions.(approx: 2000)")
 
 fraud, legit = 0,0
 
