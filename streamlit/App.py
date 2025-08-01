@@ -9,7 +9,7 @@ def load_model():
 
 model = load_model()
 
-X = pd.read_csv('/data/realtime_split.csv')
+X = pd.read_csv('data/realtime_split.csv')
 
 st.title("Real-Time Fraud Detection Simulator")
 
