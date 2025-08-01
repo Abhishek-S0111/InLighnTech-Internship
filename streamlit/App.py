@@ -13,6 +13,8 @@ X = pd.read_csv('data/realtime_split.csv')
 
 st.title("Real-Time Fraud Detection Simulator")
 
+st.caption("The simulation will only log the fraudulent transactions on the screen. Since there are huge no. of transactions.")
+
 fraud, legit = 0,0
 
 #placeholder = st.empty()
@@ -28,9 +30,9 @@ if st.button("Start Simulation"):
             st.write(f"Transaction #{i+1}: FRAUDULENT | Confidence: {proba:.2f}")
         else:
             legit += 1
-            st.write(f"Transaction #{i+1}: LEGITIMATE | Confidence: {proba:.2f}")
+            #st.write(f"Transaction #{i+1}: LEGITIMATE | Confidence: {proba:.2f}")
         
-        time.sleep(0.1)  # simulate delay
+        #time.sleep(0.1)  # simulate delay
 
     st.write("---")
     st.write(f"✅ Legitimate Transactions: {legit}")
