@@ -5,7 +5,7 @@ import time
 
 @st.cache_resource
 def load_model():
-    return joblib.load('../model/CreditCardFraudXGB.pkl')
+    return joblib.load('model/CreditCardFraudXGB.pkl')
 
 model = load_model()
 
