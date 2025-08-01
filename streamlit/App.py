@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 def print_fraud(row):
-    st.write(f"Amount : {row[['Amount']]}")
+    st.write(f"Amount : {row.iloc[0]['Amount']}")
 
 @st.cache_resource
 def load_model():
