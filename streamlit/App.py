@@ -36,8 +36,7 @@ if st.button("Start Simulation"):
             legit += 1
             placeholder.write(f"Transaction #{i+1}: LEGITIMATE | Confidence: {proba:.2f}")
         
-        time.sleep(0.1)  # simulate delay
-
+        
     st.write("---")
     st.write(f"✅ Legitimate Transactions: {legit}")
     st.write(f"⚠️ Fraudulent Transactions: {fraud}")
