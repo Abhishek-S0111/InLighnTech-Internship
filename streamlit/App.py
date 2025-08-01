@@ -15,7 +15,7 @@ st.title("Real-Time Fraud Detection Simulator")
 
 fraud, legit = 0,0
 
-placeholder = st.empty()
+#placeholder = st.empty()
 
 if st.button("Start Simulation"):
     for i in range(len(X)):
@@ -25,10 +25,10 @@ if st.button("Start Simulation"):
         
         if pred == 1:
             fraud += 1
-            placeholder.write(f"Transaction #{i+1}: FRAUDULENT | Confidence: {proba:.2f}")
+            st.write(f"Transaction #{i+1}: FRAUDULENT | Confidence: {proba:.2f}")
         else:
             legit += 1
-            placeholder.write(f"Transaction #{i+1}: LEGITIMATE | Confidence: {proba:.2f}")
+            st.write(f"Transaction #{i+1}: LEGITIMATE | Confidence: {proba:.2f}")
         
         time.sleep(0.1)  # simulate delay
 
